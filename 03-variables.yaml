@@ -1,10 +1,8 @@
 - name: variables in ansible
   hosts: mongodb
-  vars:
-    COURSE: DevOps with AWS
-    TRAINER: Madeen
-    DURATION: 90hrs
-  tasks:
+  vars_files:
+  - variables.yaml
+  tasks:  
   - name: print hello world
     ansible.builtin.debug:
       msg: "Hello, I am learning Ansible"
