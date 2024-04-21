@@ -1,0 +1,16 @@
+- name: testing variable precedence
+  hosts: mongodb
+  vars:
+   NAME: madeen-play
+  vars-files:
+  - variables.yaml
+  vars_prompt:
+  - name: NAME
+    prompt: Please enter your trainer name
+    private: false # you can see the value entered on screen
+  tasks:
+  - NAME: variable at task level  
+    vars:
+      NAME: madeen-task
+    ansible.builtin.debug:
+      msg: "trainer name is: {{NAME}}"  
