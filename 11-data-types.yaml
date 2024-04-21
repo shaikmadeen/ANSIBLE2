@@ -10,7 +10,7 @@
   - Ansible
   Experience: #map
     Devops: 7
-    AWS:4
+    AWS: 4
     Ansible: 2
   tasks:
   - name: print number variable
