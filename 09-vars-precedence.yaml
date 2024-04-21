@@ -9,7 +9,7 @@
     prompt: Please enter your trainer name
     private: false # you can see the value entered on screen
   tasks:
-  - NAME: variable at task level  
+  - name: variable at task level  
     vars:
       NAME: madeen-task
     ansible.builtin.debug:
