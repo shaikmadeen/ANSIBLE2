@@ -1,2 +1,5 @@
-[cart]
-roboshop-us-dev-db-cart-01.devops.com
+[server1]
+mongodb ansible_host=54.164.157.128 ansible_connection=ssh ansible_user=centos ansible_port=22
+
+[mongodb:vars]
+  MONGO_USERNAME=mongodbadmin
