@@ -6,10 +6,16 @@
     ansible.builtin.yum:
      msg: "{{item}}"
      state: installed
+  - name: Install the latest version of nginx and postfix
+    ansible.builtin.dnf:
+    name:
+      - nginx
+      - postfix
+    state: latest
+
      # list of string
     loop:
     - nginx
-    - git
     - postfix 
 
     
