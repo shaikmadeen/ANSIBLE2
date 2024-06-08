@@ -2,15 +2,12 @@
   hosts: localhost
   become: yes
   tasks:
-  - name: install package
-    ansible.builtin.yum:
-     msg: "{{item}}"
-     state: installed
   - name: Install the latest version of nginx and postfix
     ansible.builtin.dnf:
     name:
      - nginx
      - postfix
+    msg: "{{item}}"
     state: latest
 
      # list of string
