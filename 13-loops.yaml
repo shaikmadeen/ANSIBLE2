@@ -4,8 +4,8 @@
   tasks:
   - name: install package
     ansible.builtin.package:
-    msg: "{{item}}"
-    state: prsent
+     msg: "{{item}}"
+     state: prsent
     loop:
     - nginx
     - git
