@@ -3,9 +3,9 @@
   become: yes
   tasks:
   - name: install package
-    ansible.builtin.yum:
-     msg: "{{item}}"
-     state: installed
+    ansible.builtin.package:
+    msg: "{{item}}"
+     state: prsent
     loop:
     - nginx
     - git
