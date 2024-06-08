@@ -9,8 +9,8 @@
   - name: Install the latest version of nginx and postfix
     ansible.builtin.dnf:
     name:
-      - nginx
-      - postfix
+     - nginx
+     - postfix
     state: latest
 
      # list of string
