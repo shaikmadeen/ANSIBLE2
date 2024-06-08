@@ -1,0 +1,13 @@
+- name: install packages
+  hosts: mongodb
+  tasks:
+  - name: install package
+    ansible.builtin.yum:
+     msg: "{{item}}"
+     state: installed
+    loop:
+    - nginx
+    - git
+    - postfix 
+
+    
