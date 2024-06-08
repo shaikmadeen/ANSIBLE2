@@ -1,18 +1,13 @@
-- name: install packages
+- name: loops
   hosts: localhost
   become: yes
   tasks:
-  - name: Install the latest version of nginx and postfix
-    ansible.builtin.dnf:
-    name:
-     - nginx
-     - postfix
-    msg: "{{item}}"
-    state: latest
-
-     # list of string
+  - name: print persons
+    ansible.builtin.package:
+      name: "{{item}}"
+      state: present # item is a default keyword
     loop:
-    - nginx
-    - postfix 
-
+    - git
+    - mysql
+    - postfix
     
