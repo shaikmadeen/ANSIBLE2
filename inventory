@@ -1,5 +1,2 @@
-[server1]
-mongodb ansible_host=10.0.1.232 ansible_connection=ssh ansible_user=centos ansible_port=22
-
-[mongodb:vars]
-  MONGO_USERNAME=mongodbadmin
+[mongodb]
+10.0.1.215
